@@ -3,16 +3,21 @@ public class EjemploStringInmutable {
         String curso = "Programacion Java";
         String profesor = "Andres Guzman";
 
-        String detalle = curso + " con el instructor " + profesor;
-        System.out.println(detalle);
+        String resultado = curso.concat(profesor);
+        System.out.println("curso = " + curso);
+        System.out.println("resultado = " + resultado);
+        System.out.println(curso == resultado);
 
-        int numeroA = 10;
-        int numeroB = 5;
+        String resultado2 = curso.transform(c -> {
+           return c + " con " + profesor;
+        });
 
-        System.out.println(detalle + (numeroA + numeroB));
-        System.out.println(numeroA + numeroB +  detalle);
+        System.out.println("curso = " + curso);
+        System.out.println("resultado2 = " + resultado2);
 
-        String detalle2 = curso.concat(" con ").concat(profesor);
-        System.out.println(detalle2);
+        String resultado3 = resultado.replace("a", "A");
+
+        System.out.println("resultado = " + resultado);
+        System.out.println("resultado3 = " + resultado3);
     }
 }
