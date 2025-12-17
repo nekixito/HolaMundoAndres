@@ -16,10 +16,13 @@ public class EjemploStringTestRendimientoConcat {
                     .append("\n");
         }
 
+        System.gc();
+
         long fin = System.currentTimeMillis();
 
         System.out.println(fin - inicio);
         System.out.println("c = " + c);
         System.out.println("sb = " + sb.toString());
+        System.exit(0);
     }
 }
