@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class EjemploClaseMathRandom {
     public static void main(String[] args) {
 
@@ -14,6 +16,15 @@ public class EjemploClaseMathRandom {
 
         System.out.println("color = " + colores[(int) random]);
 
-        
+        Random randomObj = new Random();
+        int randomInt = 15 + randomObj.nextInt(25-15+1);
+
+        System.out.println("randomInt = " + randomInt);
+
+        randomInt = randomObj.nextInt(colores.length);
+        System.out.println("randomInt colores = " + randomInt);
+        System.out.println("color = " + colores[randomInt]);
+
+
     }
 }
